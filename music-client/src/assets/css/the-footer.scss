@@ -1,0 +1,15 @@
+@import "var.scss";
+@import "global.scss";
+
+.the-footer {
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: $footer-height;
+  height: 100px;
+  background-color: $theme-footer-color;
+  @include layout(center, center, column);
+  p {
+    height: 25px;
+  }
+}

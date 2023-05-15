@@ -1,0 +1,157 @@
+@import "var.scss";
+@import "global.scss";
+
+.play-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  transition: all 0.5s;
+  @include box-shadow($box-shadow);
+
+  .item-up {
+    position: absolute;
+    bottom: $play-bar-height + 10px;
+    left: 20px;
+    cursor: pointer;
+  }
+
+  .kongjian {
+    @include layout(center, center);
+    bottom: 0;
+    height: $play-bar-height;
+    width: 100%;
+    min-width: 1000px;
+    background-color: $theme-play-bar-color;
+
+    .item {
+      position: relative;
+      width: 80px;
+      height: 50px;
+      line-height: 60px;
+      text-align: center;
+      cursor: pointer;
+      .icon.active {
+        color: red !important;
+      }
+      .volume {
+        position: absolute;
+        display: none;
+        height: 100px;
+        top: -($play-bar-height + 75px);
+        right: 22px;
+        background-color: #fff;
+        padding: 10px 0 10px 0;
+        border: 3px solid rgb(236, 236, 236);
+        border-radius: 5px;
+
+        /deep/ .el-slider__bar{
+          background-color: rgb(255, 188, 214);
+          border-bottom-left-radius: 2px;
+          border-bottom-right-radius: 2px;
+          
+        }
+        
+        /deep/ .el-slider__button {
+          background-color: #fff;
+          border: 3px solid rgb(198, 198, 198);
+          height: 5px;
+          width: 11px;
+          border-radius: 5px;
+        }
+
+        /deep/ .el-slider__runway{
+          background-color: rgb(236, 236, 236);
+          border-top-left-radius: 2px;
+          border-top-right-radius: 2px;
+      }
+      }
+      .show-volume {
+        display: block;
+      }
+    }
+
+    .item-img {
+      width: $play-bar-height - 10px;
+      height: $play-bar-height - 10px;
+      img {
+        border-radius: 20%;
+        width: 100%;
+      }
+    }
+
+    .playing-speed {
+      // 进度条
+      height: 50px;
+      width: 600px;
+      @include layout(center, center);
+
+      .current-time,
+      .left-time {
+        width: 70px;
+        text-align: center;
+        font-size: 13px;
+        // color: $color-black;
+        color: rgb(101, 101, 101);
+        font-weight: 600;
+        top: -10px;
+      }
+
+      .progress-box {
+        flex: 1;
+        .item-song-title {
+          @include layout(space-between);
+          height: 20px;
+          line-height: 10px;
+          font-weight: bold;
+          color: rgb(101, 101, 101);
+        }
+        .progress {
+          width: 100%;
+          // background: $color-blue-shallow;
+          background-color: rgb(236, 236, 236);
+          border-radius: 1px;
+          height: 6px;
+          .bg {
+            height: 100%;
+            .cur-progress {
+              height: 100%;
+              // background: $color-blue-active;
+              background-color: rgb(255, 188, 214);
+              border-top-left-radius: 1px;
+              border-bottom-left-radius: 1px;
+            }
+          }
+          .idot {
+            width: 10px;
+            height: 10px;
+            position: relative;
+            border-radius: 50%;
+            // background-color: $color-black;
+            background-color: #fff;
+            border: 3px solid rgb(198, 198, 198);
+            top: -11px;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+  }
+}
+
+.turn {
+  transform: rotate(180deg);
+}
+
+.show {
+  bottom: -($play-bar-height);
+}
+
+.icon {
+  @include icon(1.2em, $color-black);
+}
+
+.icon2 {
+  font-size: 25px;
+  font-weight: bold;
+}
+

@@ -1,0 +1,33 @@
+@import "var.scss";
+@import "global.scss";
+
+.login {
+  position: absolute;
+  width: 300px;
+  height: 210px;
+  // top: $header-height + 150px;
+  padding: 30px 50px;
+  border-radius: 10px;
+  background-color: $color-white;
+
+  .login-head {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .login-btn {
+    @include layout(space-between);
+    button {
+      display: block;
+      width: 50%;
+    }
+  }
+}
+
+.login-in {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

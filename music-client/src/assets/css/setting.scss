@@ -1,0 +1,64 @@
+@import "var.scss";
+@import "global.scss";
+
+.setting {
+  margin: 30px 10%;
+  margin-top: $header-height + 20px;
+  min-height: 65vh;
+  @include layout;
+  background-color: $color-white;
+  border-radius: 12px;
+}
+
+/* 左侧导航栏 */
+.leftCol {
+  margin-top: 10px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  width: 170px;
+
+  .settingsMainHeader {
+    height: 60px;
+    line-height: 60px;
+    font-size: 22px;
+    font-weight: 500;
+  }
+}
+
+.setting-aside {
+  width: 100%;
+  li {
+    text-align: center;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 10px;
+    margin: 5px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    // margin-right: 2px;
+    cursor: pointer;
+
+    &:hover {
+      // background-color: $color-blue-active;
+      color: $color-blue-active;
+      font-weight: bold;
+    }
+    &:active {
+      background-color: $color-blue-active;
+    }
+  }
+}
+
+.activeColor {
+  background-color: $color-blue-active !important;
+  color: $color-white !important;
+  font-weight: bold;
+}
+
+/* 右边内容 */
+.contentCol {
+  flex: 1;
+  padding-top: 20px;
+}
