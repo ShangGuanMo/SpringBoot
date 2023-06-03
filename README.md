@@ -1,4 +1,4 @@
-#### -SpringBoot-
+#### SpringBoot + Vue2.0 + WebSocket
 使用SpringBoot和Vue实现整体，WebSocket实现聊天（有很多缺陷）
 
 侵删！
